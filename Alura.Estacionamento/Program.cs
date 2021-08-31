@@ -192,7 +192,7 @@ namespace Alura.Estacionamento
             {
                 Console.WriteLine("Dados do Automovél");
                 Automovel carro = new Automovel();
-                //preeencher placa,cor,hora,entrada e proprietário
+                //preeencher placa,cor,hora,entrada e proprietário.
                 Console.Write("Digite os dados da placa (XXX-9999): ");
                 try
                 {
