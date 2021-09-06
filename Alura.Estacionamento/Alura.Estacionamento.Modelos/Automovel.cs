@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Alura.Estacionamento.Modelos
 {
-    class Automovel:Veiculo
+    public class Automovel:Veiculo
     {
-        public int Ocupantes;
-        public int VolumePortaMalas;
-        public int QtdePortas;
+        private int ocupantes;
+        private int volumePortaMalas;
+        private int qtdePortas;
+
+        public int Ocupantes { get => ocupantes; set => ocupantes = value; }
+        public int VolumePortaMalas { get => volumePortaMalas; set => volumePortaMalas = value; }
+        public int QtdePortas { get => qtdePortas; set => qtdePortas = value; }
     }
 }

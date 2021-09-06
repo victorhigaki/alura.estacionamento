@@ -8,9 +8,14 @@ namespace Alura.Estacionamento.Modelos
 {
     class Motocicleta:Veiculo
     {
-        public int Cilindradas;
-        public bool TemFreioDisco;
-        public bool TemPortaCapacete;
-        public bool TemPartidaEletrica;
+        private int cilindradas;
+        private bool temFreioDisco;
+        private bool temPortaCapacete;
+        private bool temPartidaEletrica;
+
+        public int Cilindradas { get => cilindradas; set => cilindradas = value; }
+        public bool TemFreioDisco { get => temFreioDisco; set => temFreioDisco = value; }
+        public bool TemPortaCapacete { get => temPortaCapacete; set => temPortaCapacete = value; }
+        public bool TemPartidaEletrica { get => temPartidaEletrica; set => temPartidaEletrica = value; }
     }
 }
