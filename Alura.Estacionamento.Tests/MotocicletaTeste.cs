@@ -1,12 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Alura.Estacionamento.Modelos;
+using Xunit;
 
 namespace Alura.Estacionamento.Tests
 {
-    class MotocicletaTeste
+    public class MotocicletaTeste
     {
+        [Fact]
+        public void DadosMotocicleta()
+        {
+            //Arrange
+            var moto = new Motocicleta();
+            moto.Proprietario = "Andressa Silva";
+            moto.Placa = "ZAP-7419";
+            moto.Cor = "Verde";
+            moto.Modelo = "Yamaha";
+            moto.Cilindradas = 500;
+            moto.Cor = "Amarela";
+
+            //Act
+            string dados = moto.ToString();
+
+            //Assert
+            Assert.Contains("Tipo do Veículo: Motocicleta", dados);
+            
+
+        }
     }
 }

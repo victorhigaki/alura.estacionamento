@@ -109,5 +109,16 @@ namespace Alura.Estacionamento.Modelos
             Proprietario = proprietario;
         }
 
+        public virtual void AlteraDados(Veiculo veiculoAlterado)
+        {
+            this.Proprietario = veiculoAlterado.Proprietario;
+            this.Modelo = veiculoAlterado.Modelo;
+            this.Comprimento = veiculoAlterado.Comprimento;
+            this.Largura = veiculoAlterado.Largura;
+            this.Cor = veiculoAlterado.Cor;
+            this.Peso = veiculoAlterado.Peso;
+            this.CapacidadeTanque = veiculoAlterado.CapacidadeTanque;
+        }
+
     }
 }

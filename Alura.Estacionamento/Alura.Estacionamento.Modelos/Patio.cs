@@ -82,6 +82,21 @@ namespace Alura.Estacionamento.Modelos
             return registro;
         }
 
+        public Veiculo AlteraDadosVeiculo(Veiculo veiculoAlterado)
+        {
+            Veiculo encontrado = null;
+            foreach (Veiculo v in this.Veiculos)
+            {
+                if (v.Placa == veiculoAlterado.Placa)
+                {
+                    v.AlteraDados(veiculoAlterado);
+                    encontrado = v;
+                    break;
+                }
+            }
+            return encontrado;
+        }
+
         public Veiculo PesquisaVeiculo(string placa)
         {
             Veiculo encontrado = null;
@@ -90,6 +105,7 @@ namespace Alura.Estacionamento.Modelos
                 if (v.Placa == placa)
                 {
                     encontrado = v;
+                    break;
                 }
             }
             return encontrado;
