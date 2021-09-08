@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Alura.Estacionamento.Modelos
 {
@@ -76,7 +78,6 @@ namespace Alura.Estacionamento.Modelos
             }
 
         }
-
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }
 
@@ -98,7 +99,7 @@ namespace Alura.Estacionamento.Modelos
             this.VelocidadeAtual -= (tempoSeg * 15);
         }
 
-        public Veiculo()
+         public Veiculo()
         {
 
         }

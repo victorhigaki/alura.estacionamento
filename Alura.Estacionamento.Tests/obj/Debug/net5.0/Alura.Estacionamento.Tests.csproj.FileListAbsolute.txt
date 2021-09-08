@@ -106,24 +106,16 @@ C:\Users\André Bessa da Silva\source\repos\Alura.Estacionamento\Alura.Estaciona
 C:\Users\André Bessa da Silva\source\repos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.pdb
 C:\Users\André Bessa da Silva\source\repos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\CoverletSourceRootsMapping
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.csproj.AssemblyReference.cache
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.AssemblyInfoInputs.cache
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.AssemblyInfo.cs
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.csproj.CoreCompileInputs.cache
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.dll
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\ref\Alura.Estacionamento.Tests.dll
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.pdb
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\testhost.exe
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\testhost.dll
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.deps.json
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.runtimeconfig.json
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.runtimeconfig.dev.json
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.exe
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\testhost.exe
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Microsoft.TestPlatform.PlatformAbstractions.dll
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\xunit.runner.utility.netcoreapp10.dll
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.Tests.deps.json
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.Tests.runtimeconfig.json
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.Tests.runtimeconfig.dev.json
@@ -210,5 +202,13 @@ C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estaciona
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.dll
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\bin\Debug\net5.0\Alura.Estacionamento.pdb
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.csproj.CoreCompileInputs.cache
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.csproj.CopyComplete
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.dll
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\ref\Alura.Estacionamento.Tests.dll
+C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.pdb
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento.Tests\obj\Debug\net5.0\Alura.Estacionamento.Tests.genruntimeconfig.cache

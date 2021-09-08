@@ -21,7 +21,6 @@ C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estaciona
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.dll
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\bin\Debug\net5.0\ref\Alura.Estacionamento.dll
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.pdb
-C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.csproj.AssemblyReference.cache
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.AssemblyInfoInputs.cache
 C:\Users\andre\OneDrive\Documentos\Projetos\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.AssemblyInfo.cs

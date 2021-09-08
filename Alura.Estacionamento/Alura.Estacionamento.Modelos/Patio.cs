@@ -16,7 +16,6 @@ namespace Alura.Estacionamento.Modelos
         }
         private List<Veiculo> veiculos;
         private double faturado;
-
         public double Faturado { get => faturado; set => faturado = value; }
         public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }
 
@@ -83,5 +82,17 @@ namespace Alura.Estacionamento.Modelos
             return registro;
         }
 
+        public Veiculo PesquisaVeiculo(string placa)
+        {
+            Veiculo encontrado = null;
+            foreach (Veiculo v in this.Veiculos)
+            {
+                if (v.Placa == placa)
+                {
+                    encontrado = v;
+                }
+            }
+            return encontrado;
+        }
     }
 }
