@@ -8,7 +8,7 @@ namespace Alura.Estacionamento.Tests
     public class PatioTeste
     {
         [Fact]
-        public void ValidaFaturamento()
+        public void ValidaFaturamentoDeSomenteUmVeiculoPatio()
         {
             //Arranje
             Patio estacionamento = new Patio();
@@ -36,7 +36,7 @@ namespace Alura.Estacionamento.Tests
         [InlineData("André Silva", "OKU-1498", "Amarelo", "HB20")]
         [InlineData("André Silva", "QWZ-5154", "Verde", "Santana")]
         [InlineData("André Silva", "PLU-8472", "Branco", "Logan")]
-        public void ValidaFaturamentoComVariosVeiculos(string proprietario,
+        public void ValidaFaturamentoComVariosVeiculosNoPatio(string proprietario,
                                                         string placa,
                                                         string cor,
                                                         string modelo)
@@ -62,7 +62,7 @@ namespace Alura.Estacionamento.Tests
 
         [Theory]     
         [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
-        public void LocalizaVeiculoNoPatio(string proprietario,
+        public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
                                            string placa,
                                            string cor,
                                            string modelo)

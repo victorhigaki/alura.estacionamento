@@ -1,17 +1,26 @@
 using Alura.Estacionamento.Modelos;
 using System;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Alura.Estacionamento.Tests
 {
     public class VeiculoTeste
     {
-        [Fact(DisplayName = "Teste n°1")]
+        public ITestOutputHelper Output { get; }
+        private Veiculo veiculo;
+        public VeiculoTeste(ITestOutputHelper output)
+        {
+            Output = output;
+            Output.WriteLine("Execução do  construtor.");
+            veiculo = new Veiculo();
+        }
+        [Fact]
         [Trait("Funcionalidade", "Acelerar")]
-        public void TestaVeiculoAcelerar()
+        public void TestaVeiculoAcelerarComAceleracao10()
         {
             //Arrange
-            var veiculo = new Veiculo();
+            //var veiculo = new Veiculo();
 
             //Act
             veiculo.Acelerar(10);
@@ -21,9 +30,9 @@ namespace Alura.Estacionamento.Tests
 
         }
 
-        [Fact(DisplayName ="Teste n°2")]
+        [Fact]
         [Trait("Propriedade", "Proprietário")]
-        public void TestaNomeProprietarioVeiculo()
+        public void TestaNomeProprietarioVeiculoComDoisCaracteres()
         {
             //Arrange 
             string nomeProprietario = "Ab";
@@ -34,12 +43,13 @@ namespace Alura.Estacionamento.Tests
             );
         }
 
-        [Fact(DisplayName = "Teste n°3")]
+        [Fact]
         [Trait("Funcionalidade", "Freiar")]
-        public void TestaVeiculoFreiar()
+        public void TestaVeiculoFreiarComFreio10()
         {
             //Arrange
-            var veiculo = new Veiculo();
+            //var veiculo = new Veiculo();
+
             //Act
             veiculo.Freiar(10);
             //Assert
@@ -47,7 +57,7 @@ namespace Alura.Estacionamento.Tests
         }
 
         [Fact]
-        public void AlteraDadosVeiculo()
+        public void TestaAlteraDadosVeiculoDeUmDeterminadoVeiculoComBaseNaPlaca()
         {
             //Arrange
             Patio estacionamento = new Patio();
