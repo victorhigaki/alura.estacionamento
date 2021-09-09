@@ -78,7 +78,7 @@ namespace Alura.Estacionamento.Tests
                 () => new Veiculo().Placa = placa
             );
 
-            Assert.Equal("o Quarto caracter deve ser um Hifem", mensagem.Message);
+            Assert.Equal("O 4° caractere deve ser um hífen", mensagem.Message);
         }
 
         [Fact]

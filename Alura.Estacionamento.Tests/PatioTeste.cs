@@ -60,12 +60,37 @@ namespace Alura.Estacionamento.Tests
             Assert.Equal(2, faturamento);
         }
 
-        [Theory]     
+        //[Theory]     
+        //[InlineData("André Silva", "ASD-1498", "preto", "Gol")]
+        //public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
+        //                                   string placa,
+        //                                   string cor,
+        //                                   string modelo)
+        //{
+        //    //Arrange
+        //    Patio estacionamento = new Patio();
+        //    var veiculo = new Automovel();
+        //    veiculo.Proprietario = proprietario;
+        //    veiculo.Placa = placa;
+        //    veiculo.Cor = cor;
+        //    veiculo.Modelo = modelo;
+        //    veiculo.Acelerar(10);
+        //    veiculo.Freiar(5);
+        //    estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+        //    //Act
+        //    var consultado = estacionamento.PesquisaVeiculo(placa);
+
+        //    //Assert
+        //    Assert.Equal(placa,consultado.Placa);
+        //}
+
+        [Theory]
         [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
         public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
-                                           string placa,
-                                           string cor,
-                                           string modelo)
+                                          string placa,
+                                          string cor,
+                                          string modelo)
         {
             //Arrange
             Patio estacionamento = new Patio();
@@ -79,10 +104,10 @@ namespace Alura.Estacionamento.Tests
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             //Act
-            var consultado = estacionamento.PesquisaVeiculo(placa);
+            var consultado = estacionamento.PesquisaVeiculo(veiculo.IdTicket);
 
             //Assert
-            Assert.Equal(placa,consultado.Placa);
+            Assert.Equal(placa, consultado.Placa);
         }
 
     }

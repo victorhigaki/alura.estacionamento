@@ -6,6 +6,7 @@ namespace Alura.Estacionamento.Modelos
 {
     public class Veiculo
     {
+        private string _ticket;
         private string _placa;
         public string Placa
         {
@@ -25,13 +26,13 @@ namespace Alura.Estacionamento.Modelos
                     //checa se os 3 primeiros caracteres são numeros
                     if (char.IsDigit(value[i]))
                     {
-                        throw new FormatException("Os 3 primeiro caracteres deve ser letras!");
+                        throw new FormatException("Os 3 primeiros caracteres devem ser letras!");
                     }
                 }
                 //checa o Hifem
                 if (value[3] != '-')
                 {
-                    throw new FormatException("o Quarto caracter deve ser um Hifem");
+                    throw new FormatException("O 4° caractere deve ser um hífen");
                 }
                 //checa se os 3 primeiros caracteres são numeros
                 for (int i = 4; i < 8; i++)
@@ -89,6 +90,9 @@ namespace Alura.Estacionamento.Modelos
             set { _capacidadeTanque = value; }
         }
 
+        public string Ticket { get => _ticket; set => _ticket = value; }
+        public string IdTicket { get; set; }
+
         public void Acelerar(int tempoSeg)
         {
             this.VelocidadeAtual += (tempoSeg * 10);
@@ -106,7 +110,7 @@ namespace Alura.Estacionamento.Modelos
 
         public Veiculo(string proprietario)
         {
-            Proprietario = proprietario;
+           Proprietario = proprietario;
         }
 
         public virtual void AlteraDados(Veiculo veiculoAlterado)

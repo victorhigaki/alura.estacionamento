@@ -15,10 +15,10 @@ namespace Alura.Estacionamento.Modelos
             veiculos = new List<Veiculo>();
         }
         private List<Veiculo> veiculos;
-        private double faturado;
+        private double faturado;     
         public double Faturado { get => faturado; set => faturado = value; }
         public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }
-
+    
         public double TotalFaturado()
         {
             return this.Faturado;
@@ -33,6 +33,7 @@ namespace Alura.Estacionamento.Modelos
         public void RegistrarEntradaVeiculo(Veiculo veiculo)
         {
             veiculo.HoraEntrada = DateTime.Now;
+            veiculo.Ticket = this.GerarTicket(veiculo);
             this.Veiculos.Add(veiculo);            
         }
 
@@ -97,18 +98,47 @@ namespace Alura.Estacionamento.Modelos
             return encontrado;
         }
 
-        public Veiculo PesquisaVeiculo(string placa)
+        public Veiculo PesquisaVeiculo(string ticket)
         {
-            Veiculo encontrado = null;
+           Veiculo encontrado = null;
+         
             foreach (Veiculo v in this.Veiculos)
             {
-                if (v.Placa == placa)
+                if (v.IdTicket == ticket)
                 {
                     encontrado = v;
                     break;
                 }
-            }
+            }            
+           
             return encontrado;
+        }
+
+        //public Veiculo PesquisaVeiculo(string placa)
+        //{
+        //    ; Veiculo encontrado = null;
+
+        //    foreach (Veiculo v in this.Veiculos)
+        //    {
+        //        if (v.Placa == placa)
+        //        {
+        //            encontrado = v;
+        //            break;
+        //        }
+        //    }
+
+        //    return encontrado;
+        //}
+
+        private string GerarTicket(Veiculo veiculo){
+            // Vamos criar um Id aletório para o Ticket usando a Classe GUID e vamos padronizar com o tamanho de 6 caracteres.
+            string identificador = new Guid().ToString().Substring(0, 5);
+            veiculo.IdTicket = identificador;
+            string ticket = "### Ticket Estacionameno Alura ###" +
+                           $">>> Identificador: {identificador}" +
+                           $">>> Data/Hora de Entrada: {DateTime.Now}" +
+                           $">>> Placa Veículo: {veiculo.Placa}";
+            return ticket;
         }
     }
 }
