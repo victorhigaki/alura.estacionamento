@@ -44,6 +44,44 @@ namespace Alura.Estacionamento.Tests
         }
 
         [Fact]
+        public void TestaQuantidadeCaracteresPlacaVeiculo()
+        {
+            //Arrange 
+            string placa = "Ab";
+            //Assert
+            Assert.Throws<System.FormatException>(
+                //Act
+                () => new Veiculo().Placa=placa
+            );
+        }
+
+        [Fact]
+        public void TestaQuartoCaractereDaPlaca()
+        {
+            //Arrange 
+            string placa = "ASDF8888";
+            //Assert
+            Assert.Throws<System.FormatException>(
+                //Act
+                () => new Veiculo().Placa = placa
+            );
+        }
+
+        [Fact]
+        public void TestaMensagemDeExcecaoDoQuartoCaractereDaPlaca()
+        {
+            //Arrange 
+            string placa = "ASDF8888";
+            //Assert
+            var mensagem = Assert.Throws<System.FormatException>(
+                //Act
+                () => new Veiculo().Placa = placa
+            );
+
+            Assert.Equal("o Quarto caracter deve ser um Hifem", mensagem.Message);
+        }
+
+        [Fact]
         [Trait("Funcionalidade", "Freiar")]
         public void TestaVeiculoFreiarComFreio10()
         {

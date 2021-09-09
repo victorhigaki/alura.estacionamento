@@ -99,7 +99,7 @@ namespace Alura.Estacionamento.Modelos
             this.VelocidadeAtual -= (tempoSeg * 15);
         }
 
-         public Veiculo()
+        public Veiculo()
         {
 
         }
