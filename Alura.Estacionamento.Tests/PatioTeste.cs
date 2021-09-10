@@ -12,6 +12,10 @@ namespace Alura.Estacionamento.Tests
         {
             //Arranje
             Patio estacionamento = new Patio();
+            var operador  = new Operador();
+            operador.Nome = "Operador Noturno";
+            estacionamento.OperadorPatio = operador;
+
             var veiculo = new Automovel();
             veiculo.Proprietario = "André Silva";
             veiculo.Placa = "ABC-0101";
@@ -43,6 +47,10 @@ namespace Alura.Estacionamento.Tests
         {
             //Arranje
             Patio estacionamento = new Patio();
+            var operador = new Operador();
+            operador.Nome = "Operador Noturno";
+            estacionamento.OperadorPatio = operador;
+
             var veiculo = new Automovel();
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
@@ -94,6 +102,10 @@ namespace Alura.Estacionamento.Tests
         {
             //Arrange
             Patio estacionamento = new Patio();
+            var operador = new Operador();
+            operador.Nome = "Operador Noturno";
+            estacionamento.OperadorPatio = operador;
+
             var veiculo = new Automovel();
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;

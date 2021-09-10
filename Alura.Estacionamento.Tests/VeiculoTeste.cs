@@ -9,12 +9,16 @@ namespace Alura.Estacionamento.Tests
     {
         public ITestOutputHelper Output { get; }
         private Veiculo veiculo;
+        private Operador operador;
         public VeiculoTeste(ITestOutputHelper output)
         {
             Output = output;
             Output.WriteLine("Execução do  construtor.");
             veiculo = new Veiculo();
+            operador = new Operador();
+            operador.Nome = "Operador Noturno";
         }
+
         [Fact]
         [Trait("Funcionalidade", "Acelerar")]
         public void TestaVeiculoAcelerarComAceleracao10()
@@ -98,7 +102,9 @@ namespace Alura.Estacionamento.Tests
         public void TestaAlteraDadosVeiculoDeUmDeterminadoVeiculoComBaseNaPlaca()
         {
             //Arrange
+
             Patio estacionamento = new Patio();
+            estacionamento.OperadorPatio = operador;
             var veiculo = new Automovel();
             veiculo.Proprietario = "José Silva";
             veiculo.Placa = "ZXC-8524";
