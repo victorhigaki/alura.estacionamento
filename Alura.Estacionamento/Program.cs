@@ -9,21 +9,21 @@ namespace Alura.Estacionamento
 
         // Cria uma lista de objetos do tipo veículos, para armazenar
         // os veículos (automovéis e motos) que estão no estacionamento;
-            static Patio estacionamento = new Patio();         
+        static Patio estacionamento = new Patio();         
 
-            static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            string opcao;
+            do
             {
-                string opcao;
-                do
-                {
-                    Console.WriteLine(MostrarCabecalho());
-                    Console.WriteLine(MostrarMenu());
-                    opcao = LerOpcaoMenu();
-                    ProcessarOpcaoMenu(opcao);
-                    PressionaTecla();
-                    Console.Clear();// limpa a tela;
-                } while (opcao != "5");
-            }
+                Console.WriteLine(MostrarCabecalho());
+                Console.WriteLine(MostrarMenu());
+                opcao = LerOpcaoMenu();
+                ProcessarOpcaoMenu(opcao);
+                PressionaTecla();
+                Console.Clear();// limpa a tela;
+            } while (opcao != "5");
+        }
 
         private static void PressionaTecla()
         {
@@ -68,9 +68,12 @@ namespace Alura.Estacionamento
                     Console.WriteLine("Proprietário :{0}", v.Proprietario);
                     Console.WriteLine("Hora de entrada :{0:HH:mm:ss}", v.HoraEntrada);
                     Console.WriteLine("********************************************");
-                    Console.WriteLine("************Ficha Detalhada Veículo*********");
-                    Console.WriteLine(v.ToString());
-                }
+                    //Console.WriteLine("************Ficha Detalhada Veículo*********");
+                    //Console.WriteLine(v.ToString());
+                    //Console.WriteLine("********Ticket Estacionamento Alura*********");
+                    //Console.WriteLine(v.Ticket);
+                    //Console.WriteLine("********************************************");
+            }
                 if (estacionamento.Veiculos.Count == 0)
                 {
                     Console.WriteLine("Não há veículos estacionados no momento...");
