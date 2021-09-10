@@ -116,7 +116,7 @@ namespace Alura.Estacionamento.Modelos
             return encontrado;
         }
 
-        //public Veiculo PesquisaVeiculo(string placa)
+        //public Veiculo PesquisaVeiculoPorPlaca(string placa)
         //{
         //    ; Veiculo encontrado = null;
 

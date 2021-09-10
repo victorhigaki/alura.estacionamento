@@ -68,6 +68,8 @@ namespace Alura.Estacionamento
                     Console.WriteLine("Proprietário :{0}", v.Proprietario);
                     Console.WriteLine("Hora de entrada :{0:HH:mm:ss}", v.HoraEntrada);
                     Console.WriteLine("********************************************");
+                    Console.WriteLine("************Ficha Detalhada Veículo*********");
+                    Console.WriteLine(v.ToString());
                 }
                 if (estacionamento.Veiculos.Count == 0)
                 {
@@ -186,8 +188,8 @@ namespace Alura.Estacionamento
                               "1 - Registrar Entrada\n" +
                               "2 - Registrar Saída\n" +
                               "3 - Exibir Faturamento\n" +
-                              "4 - Mostrar Veículos Estacionados\n" +
-                              "5 - Sair do Programa";
+                              "4 - Mostrar Veículos Estacionados\n" +                             
+                              "5 - Sair do Programa \n";
                 return menu;
             }
         }
