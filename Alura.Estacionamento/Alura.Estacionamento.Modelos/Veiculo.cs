@@ -82,7 +82,7 @@ namespace Alura.Estacionamento.Modelos
         }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }
-        internal TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
+        public TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
 
         //Métodos
         public void Acelerar(int tempoSeg)
@@ -119,7 +119,6 @@ namespace Alura.Estacionamento.Modelos
         {
 
         }
-
         public Veiculo(string proprietario)
         {
            Proprietario = proprietario;
