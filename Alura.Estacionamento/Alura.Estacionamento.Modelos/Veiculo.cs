@@ -83,7 +83,7 @@ namespace Alura.Estacionamento.Modelos
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }   
         public string IdTicket { get; set; }
-        internal TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
+        public TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
 
         //Métodos
         public void Acelerar(int tempoSeg)
@@ -102,17 +102,6 @@ namespace Alura.Estacionamento.Modelos
             this.Modelo = veiculoAlterado.Modelo;
             this.Largura = veiculoAlterado.Largura;
             this.Cor = veiculoAlterado.Cor;
-        }
-
-        public override string ToString()
-        {
-            return  $"Ficha do Veículo:\n " +
-                    $"Tipo do Veículo: {this.Tipo.ToString()}\n " +
-                    $"Proprietário: {this.Proprietario}\n" +
-                    $"Modelo: {this.Modelo}\n" +
-                    $"Cor: {this.Cor}\n" +
-                    $"Placa: {this.Placa}\n";            
-
         }
 
         //Construtor
