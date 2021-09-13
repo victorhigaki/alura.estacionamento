@@ -1,4 +1,5 @@
-﻿using Alura.Estacionamento.Modelos;
+﻿using Alura.Estacionamento.Alura.Estacionamento.Modelos;
+using Alura.Estacionamento.Modelos;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -16,6 +17,7 @@ namespace Alura.Estacionamento.Tests
 
             var moto = new Veiculo();
             moto.Proprietario = "Andressa Silva";
+            moto.Tipo = TipoVeiculo.Motocicleta;
             moto.Placa = "ZAP-7419";
             moto.Cor = "Verde";
             moto.Modelo = "Yamaha";           
@@ -30,10 +32,10 @@ namespace Alura.Estacionamento.Tests
             //Arrange
             //var moto = new Motocicleta();
             //moto.Proprietario = "Andressa Silva";
+            //moto.Tipo = TipoVeiculo.Motocicleta;
             //moto.Placa = "ZAP-7419";
             //moto.Cor = "Verde";
             //moto.Modelo = "Yamaha";
-            //moto.Cilindradas = 500;
             //moto.Cor = "Amarela";
 
             //Act

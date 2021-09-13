@@ -1,3 +1,4 @@
+using Alura.Estacionamento.Alura.Estacionamento.Modelos;
 using Alura.Estacionamento.Modelos;
 using System;
 using Xunit;
@@ -9,14 +10,13 @@ namespace Alura.Estacionamento.Tests
     {
         public ITestOutputHelper Output { get; }
         private Veiculo veiculo;
-        private Operador operador;
+    
         public VeiculoTeste(ITestOutputHelper output)
         {
             Output = output;
             Output.WriteLine("Execução do  construtor.");
             veiculo = new Veiculo();
-            operador = new Operador();
-            operador.Nome = "Operador Noturno";
+            veiculo.Tipo = TipoVeiculo.Automovel;
         }
 
         [Fact]
@@ -32,57 +32,6 @@ namespace Alura.Estacionamento.Tests
             //Assert
             Assert.Equal(100, veiculo.VelocidadeAtual);
 
-        }
-
-        [Fact]
-        [Trait("Propriedade", "Proprietário")]
-        public void TestaNomeProprietarioVeiculoComDoisCaracteres()
-        {
-            //Arrange 
-            string nomeProprietario = "Ab";
-            //Assert
-            Assert.Throws<System.FormatException>(
-                //Act
-                () => new Veiculo(nomeProprietario)
-            );
-        }
-
-        [Fact]
-        public void TestaQuantidadeCaracteresPlacaVeiculo()
-        {
-            //Arrange 
-            string placa = "Ab";
-            //Assert
-            Assert.Throws<System.FormatException>(
-                //Act
-                () => new Veiculo().Placa=placa
-            );
-        }
-
-        [Fact]
-        public void TestaQuartoCaractereDaPlaca()
-        {
-            //Arrange 
-            string placa = "ASDF8888";
-            //Assert
-            Assert.Throws<System.FormatException>(
-                //Act
-                () => new Veiculo().Placa = placa
-            );
-        }
-
-        [Fact]
-        public void TestaMensagemDeExcecaoDoQuartoCaractereDaPlaca()
-        {
-            //Arrange 
-            string placa = "ASDF8888";
-            //Assert
-            var mensagem = Assert.Throws<System.FormatException>(
-                //Act
-                () => new Veiculo().Placa = placa
-            );
-
-            Assert.Equal("O 4° caractere deve ser um hífen", mensagem.Message);
         }
 
         [Fact]
@@ -103,10 +52,10 @@ namespace Alura.Estacionamento.Tests
         {
             //Arrange
 
-            Patio estacionamento = new Patio();
-            estacionamento.OperadorPatio = operador;
+            Patio estacionamento = new Patio();        
             var veiculo = new Veiculo();
             veiculo.Proprietario = "José Silva";
+            veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Placa = "ZXC-8524";
             veiculo.Cor = "Verde";
             veiculo.Modelo = "Opala";     
@@ -114,6 +63,7 @@ namespace Alura.Estacionamento.Tests
 
             var veiculoAlterado = new Veiculo();
             veiculoAlterado.Proprietario = "José Silva";
+            veiculoAlterado.Tipo = TipoVeiculo.Automovel;
             veiculoAlterado.Placa = "ZXC-8524";
             veiculoAlterado.Cor = "Preto"; //Alterado
             veiculoAlterado.Modelo = "Opala";
