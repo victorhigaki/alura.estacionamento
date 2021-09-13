@@ -12,7 +12,7 @@ namespace Alura.Estacionamento.Tests
     public class AutomovelTeste:IDisposable
     {
         public ITestOutputHelper Output { get; }
-        private Automovel carro = new Automovel();
+        private Veiculo carro = new Veiculo();
         public AutomovelTeste(ITestOutputHelper output)
         {
             Output = output;
@@ -48,7 +48,7 @@ namespace Alura.Estacionamento.Tests
             string dados = carro.ToString();
 
             //Assert
-            Assert.Contains("Tipo do Veículo: Automóvel", dados);
+            Assert.Contains("Tipo do Veículo:", dados);
            
         }
 

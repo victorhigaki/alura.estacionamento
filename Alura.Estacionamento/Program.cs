@@ -1,4 +1,5 @@
-﻿using Alura.Estacionamento.Modelos;
+﻿using Alura.Estacionamento.Alura.Estacionamento.Modelos;
+using Alura.Estacionamento.Modelos;
 using System;
 using System.Collections.Generic;
 
@@ -85,7 +86,8 @@ namespace Alura.Estacionamento
         static void RegistrarEntradaMotocicleta()
         {
             Console.WriteLine("Dados da Motocicleta");
-            Motocicleta moto = new Motocicleta();
+            Veiculo moto = new Veiculo();
+            moto.Tipo = TipoVeiculo.Motocicleta;
             //preeencher placa,cor,hora,entrada e proprietário
             Console.Write("Digite os dados da placa (XXX-9999): ");
             try
@@ -115,7 +117,8 @@ namespace Alura.Estacionamento
         static void RegistrarEntradaAutomovel()
         {
             Console.WriteLine("Dados do Automovél");
-            Automovel carro = new Automovel();
+            Veiculo carro = new Veiculo();
+            carro.Tipo = TipoVeiculo.Automovel;
             //preeencher placa,cor,hora,entrada e proprietário.
             Console.Write("Digite os dados da placa (XXX-9999): ");
             try

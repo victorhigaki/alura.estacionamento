@@ -16,11 +16,10 @@ namespace Alura.Estacionamento.Tests
             operador.Nome = "Operador Noturno";
             estacionamento.OperadorPatio = operador;
 
-            var veiculo = new Automovel();
+            var veiculo = new Veiculo();
             veiculo.Proprietario = "André Silva";
             veiculo.Placa = "ABC-0101";
-            veiculo.Modelo = "Fusca";
-            veiculo.QtdePortas = 2;
+            veiculo.Modelo = "Fusca";    
             veiculo.Acelerar(10);
             veiculo.Freiar(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
@@ -51,7 +50,7 @@ namespace Alura.Estacionamento.Tests
             operador.Nome = "Operador Noturno";
             estacionamento.OperadorPatio = operador;
 
-            var veiculo = new Automovel();
+            var veiculo = new Veiculo();
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
             veiculo.Cor = cor;
@@ -106,7 +105,7 @@ namespace Alura.Estacionamento.Tests
             operador.Nome = "Operador Noturno";
             estacionamento.OperadorPatio = operador;
 
-            var veiculo = new Automovel();
+            var veiculo = new Veiculo();
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
             veiculo.Cor = cor;

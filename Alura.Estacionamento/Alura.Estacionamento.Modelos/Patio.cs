@@ -1,4 +1,5 @@
-﻿using Alura.Estacionamento.Modelos;
+﻿using Alura.Estacionamento.Alura.Estacionamento.Modelos;
+using Alura.Estacionamento.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,6 @@ namespace Alura.Estacionamento.Modelos
         public double Faturado { get => faturado; set => faturado = value; }
         public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }
         public Operador OperadorPatio { get => _operadorPatio; set => _operadorPatio = value; }
-
         public double TotalFaturado()
         {
             return this.Faturado;
@@ -51,7 +51,7 @@ namespace Alura.Estacionamento.Modelos
                     v.HoraSaida = DateTime.Now;
                     TimeSpan tempo = v.HoraSaida - v.HoraEntrada;
                     double valorCobrado = 0;
-                    if (v is Automovel)
+                    if (v.Tipo == TipoVeiculo.Automovel)
                     {
                         /// o método Math.Ceiling(), aplica o conceito de teto da matemática onde o valor máximo é o inteiro imediatamente posterior a ele.
                         /// Ex.: 0,9999 ou 0,0001 teto = 1
@@ -59,7 +59,7 @@ namespace Alura.Estacionamento.Modelos
                         valorCobrado = Math.Ceiling(tempo.TotalHours) * 2;
 
                     }
-                    else if (v is Motocicleta)
+                    else if (v.Tipo == TipoVeiculo.Motocicleta)
                     {
                         valorCobrado = Math.Ceiling(tempo.TotalHours) * 1;
                     }
@@ -116,21 +116,21 @@ namespace Alura.Estacionamento.Modelos
             return encontrado;
         }
 
-        //public Veiculo PesquisaVeiculoPorPlaca(string placa)
-        //{
-        //    ; Veiculo encontrado = null;
+        public Veiculo PesquisaVeiculoPorPlaca(string placa)
+        {
+            ; Veiculo encontrado = null;
 
-        //    foreach (Veiculo v in this.Veiculos)
-        //    {
-        //        if (v.Placa == placa)
-        //        {
-        //            encontrado = v;
-        //            break;
-        //        }
-        //    }
+            foreach (Veiculo v in this.Veiculos)
+            {
+                if (v.Placa == placa)
+                {
+                    encontrado = v;
+                    break;
+                }
+            }
 
-        //    return encontrado;
-        //}
+            return encontrado;
+        }
 
         private string GerarTicket(Veiculo veiculo){
             // Vamos criar um Id aletório para o Ticket usando a Classe GUID e vamos padronizar com o tamanho de 6 caracteres.

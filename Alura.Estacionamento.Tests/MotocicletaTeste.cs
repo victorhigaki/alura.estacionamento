@@ -6,7 +6,7 @@ namespace Alura.Estacionamento.Tests
 {
     public class MotocicletaTeste
     {
-        private Motocicleta moto = new Motocicleta();
+        private Veiculo moto = new Veiculo();
         //Classe do xUnit para trabalharmos com saídas no console de teste.
         public ITestOutputHelper Output { get; }
         public MotocicletaTeste(ITestOutputHelper output)
@@ -14,12 +14,11 @@ namespace Alura.Estacionamento.Tests
             Output = output;
             Output.WriteLine("Execução do  construtor.");
 
-            var moto = new Motocicleta();
+            var moto = new Veiculo();
             moto.Proprietario = "Andressa Silva";
             moto.Placa = "ZAP-7419";
             moto.Cor = "Verde";
-            moto.Modelo = "Yamaha";
-            moto.Cilindradas = 500;
+            moto.Modelo = "Yamaha";           
             moto.Cor = "Amarela";
             
         }
@@ -41,7 +40,7 @@ namespace Alura.Estacionamento.Tests
             string dados = moto.ToString();
 
             //Assert
-            Assert.Contains("Tipo do Veículo: Motocicleta", dados);
+            Assert.Contains("Tipo do Veículo:", dados);
             
 
         }

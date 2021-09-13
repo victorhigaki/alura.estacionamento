@@ -105,14 +105,14 @@ namespace Alura.Estacionamento.Tests
 
             Patio estacionamento = new Patio();
             estacionamento.OperadorPatio = operador;
-            var veiculo = new Automovel();
+            var veiculo = new Veiculo();
             veiculo.Proprietario = "José Silva";
             veiculo.Placa = "ZXC-8524";
             veiculo.Cor = "Verde";
             veiculo.Modelo = "Opala";     
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
-            var veiculoAlterado = new Automovel();
+            var veiculoAlterado = new Veiculo();
             veiculoAlterado.Proprietario = "José Silva";
             veiculoAlterado.Placa = "ZXC-8524";
             veiculoAlterado.Cor = "Preto"; //Alterado

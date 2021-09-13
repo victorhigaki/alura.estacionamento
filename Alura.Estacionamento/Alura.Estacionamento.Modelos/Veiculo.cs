@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Alura.Estacionamento.Alura.Estacionamento.Modelos;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,8 +7,13 @@ namespace Alura.Estacionamento.Modelos
 {
     public class Veiculo
     {
+        //Campos
         private string _ticket;
         private string _placa;
+        private string _proprietario;        
+        private TipoVeiculo _tipo;
+
+        //Propriedades
         public string Placa
         {
             get
@@ -56,13 +62,9 @@ namespace Alura.Estacionamento.Modelos
         /// Framework, entre outros benefícios.
         /// </summary>
         public string Cor { get; set; }
-        public double Largura { get; set; }
-        public double Comprimento { get; set; }
-        public double Peso { get; set; }
+        public double Largura { get; set; }    
         public double VelocidadeAtual { get; set; }
-        public string Modelo { get; set; }
-
-        private string _proprietario;
+        public string Modelo { get; set; }        
         public string Proprietario
         {
             get
@@ -81,18 +83,11 @@ namespace Alura.Estacionamento.Modelos
         }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }
-
-        private int _capacidadeTanque;
-
-        public int CapacidadeTanque
-        {
-            get { return _capacidadeTanque; }
-            set { _capacidadeTanque = value; }
-        }
-
         public string Ticket { get => _ticket; set => _ticket = value; }
         public string IdTicket { get; set; }
+        internal TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
 
+        //Métodos
         public void Acelerar(int tempoSeg)
         {
             this.VelocidadeAtual += (tempoSeg * 10);
@@ -103,6 +98,26 @@ namespace Alura.Estacionamento.Modelos
             this.VelocidadeAtual -= (tempoSeg * 15);
         }
 
+        public void AlteraDados(Veiculo veiculoAlterado)
+        {
+            this.Proprietario = veiculoAlterado.Proprietario;
+            this.Modelo = veiculoAlterado.Modelo;
+            this.Largura = veiculoAlterado.Largura;
+            this.Cor = veiculoAlterado.Cor;
+        }
+
+        public override string ToString()
+        {
+            return  $"Ficha do Veículo:\n " +
+                    $"Tipo do Veículo: {this.Tipo.ToString()}\n " +
+                    $"Proprietário: {this.Proprietario}\n" +
+                    $"Modelo: {this.Modelo}\n" +
+                    $"Cor: {this.Cor}\n" +
+                    $"Placa: {this.Placa}\n";            
+
+        }
+
+        //Construtor
         public Veiculo()
         {
 
@@ -113,16 +128,7 @@ namespace Alura.Estacionamento.Modelos
            Proprietario = proprietario;
         }
 
-        public virtual void AlteraDados(Veiculo veiculoAlterado)
-        {
-            this.Proprietario = veiculoAlterado.Proprietario;
-            this.Modelo = veiculoAlterado.Modelo;
-            this.Comprimento = veiculoAlterado.Comprimento;
-            this.Largura = veiculoAlterado.Largura;
-            this.Cor = veiculoAlterado.Cor;
-            this.Peso = veiculoAlterado.Peso;
-            this.CapacidadeTanque = veiculoAlterado.CapacidadeTanque;
-        }
+        
 
     }
 }
