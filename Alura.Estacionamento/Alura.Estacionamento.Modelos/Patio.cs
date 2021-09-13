@@ -10,7 +10,7 @@ namespace Alura.Estacionamento.Modelos
 {
     public class Patio
     {
-        private Operador _operadorPatio;
+
         public Patio()
         {
             Faturado = 0;
@@ -19,8 +19,7 @@ namespace Alura.Estacionamento.Modelos
         private List<Veiculo> veiculos;
         private double faturado;     
         public double Faturado { get => faturado; set => faturado = value; }
-        public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }
-        public Operador OperadorPatio { get => _operadorPatio; set => _operadorPatio = value; }
+        public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }    
         public double TotalFaturado()
         {
             return this.Faturado;
@@ -34,8 +33,7 @@ namespace Alura.Estacionamento.Modelos
 
         public void RegistrarEntradaVeiculo(Veiculo veiculo)
         {
-            veiculo.HoraEntrada = DateTime.Now;
-            veiculo.Ticket = this.GerarTicket(veiculo);
+            veiculo.HoraEntrada = DateTime.Now;     
             this.Veiculos.Add(veiculo);            
         }
 
@@ -85,48 +83,8 @@ namespace Alura.Estacionamento.Modelos
             return registro;
         }
 
-        public Veiculo AlteraDadosVeiculo(Veiculo veiculoAlterado)
-        {
-            // Como estamos trabalhando com array de objetos,
-            // Podemos utilizar os recursos do `Linq to Objetcs` do .NET
-            var veiculoTemp =  (from veiculo in this.Veiculos
-                           where veiculo.Placa == veiculoAlterado.Placa
-                           select veiculo).SingleOrDefault();
-            veiculoTemp.AlteraDados(veiculoAlterado);
-            return veiculoTemp;
+       
 
-         }
-
-        public Veiculo PesquisaVeiculo(string ticket)
-        {
-          // Como estamos trabalhando com array de objetos,
-          // Podemos utilizar os recursos do `Linq to Objetcs` do .NET
-          var encontrado = (from veiculo in this.Veiculos
-                               where veiculo.IdTicket == ticket
-                               select veiculo).SingleOrDefault();           
-           return encontrado;
-        }
-
-        public Veiculo PesquisaVeiculoPorPlaca(string placa)
-        {
-            // Como estamos trabalhando com array de objetos,
-            // Podemos utilizar os recursos do `Linq to Objetcs` do .NET
-            var encontrado = (from veiculo in this.Veiculos 
-                             where veiculo.Placa == placa 
-                             select veiculo).SingleOrDefault();
-            return encontrado;
-        }
-
-        private string GerarTicket(Veiculo veiculo){
-            // Vamos criar um Id aletório para o Ticket usando a Classe GUID e vamos padronizar com o tamanho de 6 caracteres.
-            string identificador = new Guid().ToString().Substring(0, 5);
-            veiculo.IdTicket = identificador;
-            string ticket = "### Ticket Estacionameno Alura ###" +
-                           $">>> Identificador: {identificador}" +
-                           $">>> Data/Hora de Entrada: {DateTime.Now}" +
-                           $">>> Placa Veículo: {veiculo.Placa}" +
-                           $">>> Operador: {this.OperadorPatio.Matricula}";
-            return ticket;
-        }
+       
     }
 }
