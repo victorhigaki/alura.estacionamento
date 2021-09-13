@@ -1,4 +1,5 @@
-﻿using Alura.Estacionamento.Modelos;
+﻿using Alura.Estacionamento.Alura.Estacionamento.Modelos;
+using Alura.Estacionamento.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace Alura.Estacionamento.Tests
             Output.WriteLine("Execução do  construtor.");
 
             carro.Proprietario = "Carlos Silva";
+            carro.Tipo = TipoVeiculo.Automovel;
             carro.Placa = "ZAP-7419";
             carro.Cor = "Verde";
             carro.Modelo = "Variante";
@@ -40,6 +42,7 @@ namespace Alura.Estacionamento.Tests
             //Arrange
             //var carro = new Automovel();
             //carro.Proprietario = "Carlos Silva";
+            //carro.Tipo = TipoVeiculo.Automovel;
             //carro.Placa = "ZAP-7419";
             //carro.Cor = "Verde";
             //carro.Modelo = "Variante";     

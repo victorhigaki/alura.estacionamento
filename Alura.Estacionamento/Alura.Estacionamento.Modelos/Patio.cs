@@ -97,7 +97,7 @@ namespace Alura.Estacionamento.Modelos
 
          }
 
-        public Veiculo PesquisaVeiculo(string ticket)
+        public Veiculo PesquisaVeiculoPorTicket(string ticket)
         {
           // Como estamos trabalhando com array de objetos,
           // Podemos utilizar os recursos do `Linq to Objetcs` do .NET
