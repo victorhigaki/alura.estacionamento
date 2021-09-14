@@ -81,8 +81,7 @@ namespace Alura.Estacionamento.Modelos
 
         }
         public DateTime HoraEntrada { get; set; }
-        public DateTime HoraSaida { get; set; }     
-        public string IdTicket { get; set; }
+        public DateTime HoraSaida { get; set; }   
         public TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
 
         //Métodos
@@ -95,8 +94,7 @@ namespace Alura.Estacionamento.Modelos
         {
             this.VelocidadeAtual -= (tempoSeg * 15);
         }
-
-       
+               
         //Construtor
         public Veiculo()
         {
