@@ -9,10 +9,14 @@ namespace Alura.Estacionamento.Modelos
     {
         //Campos    
         private string _placa;
-        private string _proprietario;        
+        private string _proprietario;
         private TipoVeiculo _tipo;
+        private string _ticket;
 
         //Propriedades
+        public string Ticket { get { return _ticket; } set { _ticket = value; } }
+        public string IdTicket { get; set; }
+
         public string Placa
         {
             get
@@ -72,13 +76,14 @@ namespace Alura.Estacionamento.Modelos
             }
             set
             {
-                if (value.Length < 3)
+
+                if(value.Length<3)
                 {
-                    throw new System.FormatException(" Nome de proprietário deve ter no mínimo 3 caracteres.");
+                    throw new System.FormatException("Nome do proprietario deve ter no minímo 3 caracteres.");
                 }
+
                 _proprietario = value;
             }
-
         }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }   
@@ -106,7 +111,23 @@ namespace Alura.Estacionamento.Modelos
            Proprietario = proprietario;
         }
 
-        
+        public void AlterarDadosVeiculo(Veiculo veiculo)
+        {
+            this.Placa = veiculo.Placa;
+            this.Proprietario = veiculo.Proprietario;
+            this.Cor = veiculo.Cor;
+            this.Modelo = veiculo.Modelo;
+        }
+
+        public override string ToString()
+        {
+            return $"Ficha do veículo:\n" +
+                   $"Tipo do veículo:{this.Tipo}" +
+                   $"Proprietário:{this.Proprietario}" +
+                   $"Modelo: {this.Modelo}" +
+                   $"Placa: {this.Placa}" +
+                   $"Cor: {this.Cor}";
+        }
 
     }
 }
