@@ -85,7 +85,7 @@ namespace Alura.Estacionamento.Tests
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
             veiculo.Acelerar(10);
-            veiculo.Freiar(5);
+            veiculo.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             //Act
