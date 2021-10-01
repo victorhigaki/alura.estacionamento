@@ -38,7 +38,7 @@ namespace Alura.Estacionamento.Tests
         }
 
         [Fact(DisplayName="Teste n°3",Skip = "Teste ainda não implementado")]
-        public void ValidaPropriedadeProprietarioAutomovel()
+        public void ValidaNomeProprietario()
         {
             // Exemplo de utilização do Skip
         }
