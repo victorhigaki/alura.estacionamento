@@ -102,8 +102,7 @@ namespace Alura.Estacionamento
             moto.Acelerar(5);
             moto.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(moto);
-            Console.WriteLine("Motocicleta registrada com sucesso!");
-            Console.WriteLine("Pressione qualquer tecla para prosseguir.");
+            Console.WriteLine("Motocicleta registrada com sucesso!");            
             Console.ReadKey();
         }
 
@@ -132,8 +131,7 @@ namespace Alura.Estacionamento
             carro.Acelerar(5);
             carro.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(carro);
-            Console.WriteLine("Automóvel registrado com sucesso!");
-            PressionaTecla();
+            Console.WriteLine("Automóvel registrado com sucesso!");            
         }
 
         // Monta a interface da aplicação.

@@ -9,10 +9,11 @@ namespace Alura.Estacionamento.Modelos
     {
         //Campos    
         private string _placa;
-        private string _proprietario;        
+        private string _proprietario;
         private TipoVeiculo _tipo;
+     
+        //Propriedades   
 
-        //Propriedades
         public string Placa
         {
             get
@@ -66,19 +67,7 @@ namespace Alura.Estacionamento.Modelos
         public string Modelo { get; set; }        
         public string Proprietario
         {
-            get
-            {
-                return _proprietario;
-            }
-            set
-            {
-                if (value.Length < 3)
-                {
-                    throw new System.FormatException(" Nome de proprietário deve ter no mínimo 3 caracteres.");
-                }
-                _proprietario = value;
-            }
-
+            get; set;
         }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }   
@@ -106,7 +95,6 @@ namespace Alura.Estacionamento.Modelos
            Proprietario = proprietario;
         }
 
-        
-
+       
     }
 }

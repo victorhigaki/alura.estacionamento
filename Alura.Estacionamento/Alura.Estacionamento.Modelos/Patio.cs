@@ -17,7 +17,7 @@ namespace Alura.Estacionamento.Modelos
             veiculos = new List<Veiculo>();
         }
         private List<Veiculo> veiculos;
-        private double faturado;     
+        private double faturado;
         public double Faturado { get => faturado; set => faturado = value; }
         public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }       
         public double TotalFaturado()
@@ -33,7 +33,7 @@ namespace Alura.Estacionamento.Modelos
 
         public void RegistrarEntradaVeiculo(Veiculo veiculo)
         {
-            veiculo.HoraEntrada = DateTime.Now;           
+            veiculo.HoraEntrada = DateTime.Now;            
             this.Veiculos.Add(veiculo);            
         }
 
@@ -82,8 +82,10 @@ namespace Alura.Estacionamento.Modelos
 
             return registro;
         }
-              
+
+        
 
        
+    
     }
 }

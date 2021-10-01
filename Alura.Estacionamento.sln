@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.Estacionamento", "Alura.Estacionamento\Alura.Estacionamento.csproj", "{39515548-848C-4B37-93A8-8F64568153D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Estacionamento.Tests", "Alura.Estacionamento.Tests\Alura.Estacionamento.Tests.csproj", "{F4AF6145-B10E-454C-9382-6486932C871E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{39515548-848C-4B37-93A8-8F64568153D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39515548-848C-4B37-93A8-8F64568153D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39515548-848C-4B37-93A8-8F64568153D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4AF6145-B10E-454C-9382-6486932C871E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4AF6145-B10E-454C-9382-6486932C871E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4AF6145-B10E-454C-9382-6486932C871E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4AF6145-B10E-454C-9382-6486932C871E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
