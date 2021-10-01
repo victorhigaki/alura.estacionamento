@@ -76,7 +76,7 @@ namespace Alura.Estacionamento.Tests
 
 
             //Act
-            var alterado = estacionamento.AlteraDadosVeiculo(veiculoAlterado);
+            var alterado = estacionamento.AlterarDados(veiculoAlterado);
 
             //Assert
             Assert.Equal(alterado.Cor, veiculoAlterado.Cor);
