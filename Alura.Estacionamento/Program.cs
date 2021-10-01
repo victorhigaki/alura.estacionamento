@@ -39,17 +39,13 @@ namespace Alura.Estacionamento
                 Console.WriteLine("Proprietário :{0}", v.Proprietario);
                 Console.WriteLine("Hora de entrada :{0:HH:mm:ss}", v.HoraEntrada);
                 Console.WriteLine("********************************************");
-                //Console.WriteLine("************Ficha Detalhada Veículo*********");
-                //Console.WriteLine(v.ToString());
-                //Console.WriteLine("********Ticket Estacionamento Alura*********");
-                //Console.WriteLine(v.Ticket);
-                //Console.WriteLine("********************************************");
-        }
+              
+            }
             if (estacionamento.Veiculos.Count == 0)
             {
                 Console.WriteLine("Não há veículos estacionados no momento...");
             }
-            PressionaTecla();
+            
         }
         
         static void RegistrarSaidaVeiculo()
@@ -59,7 +55,7 @@ namespace Alura.Estacionamento
             Console.Write("Placa: ");
             string placa = Console.ReadLine();          
             Console.WriteLine(estacionamento.RegistrarSaidaVeiculo(placa));
-            PressionaTecla();
+            
         }
 
         static void RegistrarEntradaVeiculo()
@@ -77,8 +73,7 @@ namespace Alura.Estacionamento
                     RegistrarEntradaMotocicleta();
                     break;
                 default:
-                    Console.WriteLine("Tipo Inválido");
-                    PressionaTecla();
+                    Console.WriteLine("Tipo Inválido");                    
                     break;
             }
         }
