@@ -21,7 +21,7 @@ namespace Alura.Estacionamento.Tests
 
         [Fact]
         [Trait("Funcionalidade", "Acelerar")]
-        public void TestaVeiculoAcelerarComAceleracao10()
+        public void TestaVeiculoAcelerarCom10()
         {
             //Arrange
             //var veiculo = new Veiculo();
@@ -86,14 +86,14 @@ namespace Alura.Estacionamento.Tests
         }
 
         [Fact]
-        [Trait("Funcionalidade", "Freiar")]
-        public void TestaVeiculoFreiarComFreio10()
+        [Trait("Funcionalidade", "Frear")]
+        public void TestaVeiculoFreiarCom10()
         {
             //Arrange
             //var veiculo = new Veiculo();
 
             //Act
-            veiculo.Freiar(10);
+            veiculo.Frear(10);
             //Assert
             Assert.Equal(-150, veiculo.VelocidadeAtual);
         }

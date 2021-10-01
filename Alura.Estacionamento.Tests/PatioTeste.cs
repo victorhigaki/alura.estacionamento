@@ -21,7 +21,7 @@ namespace Alura.Estacionamento.Tests
             veiculo.Placa = "ABC-0101";
             veiculo.Modelo = "Fusca";    
             veiculo.Acelerar(10);
-            veiculo.Freiar(5);
+            veiculo.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -35,10 +35,7 @@ namespace Alura.Estacionamento.Tests
         [Theory]
         [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
         [InlineData("Jose Silva", "POL-9242", "Cinza", "Fusca")]
-        [InlineData("André Silva", "GDR-6524", "Azul", "Opala")]
-        [InlineData("André Silva", "OKU-1498", "Amarelo", "HB20")]
-        [InlineData("André Silva", "QWZ-5154", "Verde", "Santana")]
-        [InlineData("André Silva", "PLU-8472", "Branco", "Logan")]
+        [InlineData("Maria Silva", "GDR-6524", "Azul", "Opala")]
         public void ValidaFaturamentoComVariosVeiculosNoPatio(string proprietario,
                                                         string placa,
                                                         string cor,
@@ -56,7 +53,7 @@ namespace Alura.Estacionamento.Tests
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
             veiculo.Acelerar(10);
-            veiculo.Freiar(5);
+            veiculo.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -111,7 +108,7 @@ namespace Alura.Estacionamento.Tests
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
             veiculo.Acelerar(10);
-            veiculo.Freiar(5);
+            veiculo.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             //Act
