@@ -8,7 +8,7 @@ namespace Alura.Estacionamento.Tests
     public class VeiculoTeste
     {
    
-        [Fact]
+        [Fact(DisplayName = "Teste n°1")]
         [Trait("Funcionalidade", "Acelerar")]
         public void TestaVeiculoAcelerarComAceleracao10()
         {
@@ -24,18 +24,24 @@ namespace Alura.Estacionamento.Tests
         }
          
 
-        [Fact]
-        [Trait("Funcionalidade", "Freiar")]
-        public void TestaVeiculoFreiarComFreio10()
+        [Fact(DisplayName="Teste n°2")]
+        [Trait("Funcionalidade", "Frear")]
+        public void TestaVeiculoFrear()
         {
             //Arrange
             var veiculo = new Veiculo();
 
             //Act
-            veiculo.Freiar(10);
+            veiculo.Frear(10);
             //Assert
             Assert.Equal(-150, veiculo.VelocidadeAtual);
         }
-               
+
+        [Fact(DisplayName="Teste n°3",Skip = "Teste ainda não implementado")]
+        public void ValidaPropriedadeProprietarioAutomovel()
+        {
+            // Exemplo de utilização do Skip
+        }
+
     }
 }

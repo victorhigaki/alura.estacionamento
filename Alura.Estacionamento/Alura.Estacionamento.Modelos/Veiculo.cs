@@ -90,7 +90,7 @@ namespace Alura.Estacionamento.Modelos
             this.VelocidadeAtual += (tempoSeg * 10);
         }
 
-        public void Freiar(int tempoSeg)
+        public void Frear(int tempoSeg)
         {
             this.VelocidadeAtual -= (tempoSeg * 15);
         }

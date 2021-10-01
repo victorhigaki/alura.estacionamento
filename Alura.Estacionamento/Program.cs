@@ -107,7 +107,7 @@ namespace Alura.Estacionamento
             moto.Proprietario = Console.ReadLine();
             moto.HoraEntrada = DateTime.Now;
             moto.Acelerar(5);
-            moto.Freiar(5);
+            moto.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(moto);
             Console.WriteLine("Motocicleta registrada com sucesso!");
             Console.WriteLine("Pressione qualquer tecla para prosseguir.");
@@ -137,7 +137,7 @@ namespace Alura.Estacionamento
             carro.Proprietario = Console.ReadLine();
             carro.HoraEntrada = DateTime.Now;
             carro.Acelerar(5);
-            carro.Freiar(5);
+            carro.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(carro);
             Console.WriteLine("Automóvel registrado com sucesso!");
             PressionaTecla();

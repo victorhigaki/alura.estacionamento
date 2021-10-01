@@ -18,7 +18,7 @@ namespace Alura.Estacionamento.Tests
             veiculo.Placa = "ABC-0101";
             veiculo.Modelo = "Fusca";    
             veiculo.Acelerar(10);
-            veiculo.Freiar(5);
+            veiculo.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -50,7 +50,7 @@ namespace Alura.Estacionamento.Tests
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
             veiculo.Acelerar(10);
-            veiculo.Freiar(5);
+            veiculo.Frear(5);
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
