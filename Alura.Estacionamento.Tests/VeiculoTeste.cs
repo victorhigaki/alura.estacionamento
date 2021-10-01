@@ -19,8 +19,8 @@ namespace Alura.Estacionamento.Tests
             veiculo.Tipo = TipoVeiculo.Automovel;
         }
 
-        [Fact]
-        [Trait("Funcionalidade", "Acelerar")]
+        [Fact/*(DisplayName = "Teste n°1")*/]
+        //[Trait("Funcionalidade", "Acelerar")]
         public void TestaVeiculoAcelerarComAceleracao10()
         {
             //Arrange
@@ -34,21 +34,27 @@ namespace Alura.Estacionamento.Tests
 
         }
 
-        [Fact]
-        [Trait("Funcionalidade", "Freiar")]
-        public void TestaVeiculoFreiarComFreio10()
+        [Fact/*(DisplayName = "Teste n°2")*/]
+        //[Trait("Funcionalidade", "Frear")]
+        public void TestaVeiculoFrearComFreio10()
         {
             //Arrange
             //var veiculo = new Veiculo();
 
             //Act
-            veiculo.Freiar(10);
+            veiculo.Frear(10);
             //Assert
             Assert.Equal(-150, veiculo.VelocidadeAtual);
         }
 
+        //[Fact/*(DisplayName = "Teste n°3",*/( Skip = "Teste ainda não implementado")]
+        //public void ValidaNomeProprietario()
+        //{
+        //    // Exemplo de utilização do Skip
+        //}
+
         [Fact]
-        public void TestaAlteraDadosVeiculoDeUmDeterminadoVeiculoComBaseNaPlaca()
+        public void AlteraDadosVeiculoDeUmDeterminadoVeiculoComBaseNaPlaca()
         {
             //Arrange
 
@@ -75,6 +81,24 @@ namespace Alura.Estacionamento.Tests
             //Assert
             Assert.Equal(alterado.Cor,veiculoAlterado.Cor);
 
+        }
+
+        [Fact]
+        public void GerarFichadeInformaçãodoProprioVeiculo()
+        {
+            //Arrange
+            var veiculo = new Veiculo();
+            veiculo.Proprietario = "André Silva";
+            veiculo.Tipo = TipoVeiculo.Automovel;
+            veiculo.Cor = "Preto";
+            veiculo.Modelo = "Fusca";
+            veiculo.Placa = "ZXC-8888";
+
+            //Act
+            string dadosveiculo = veiculo.ToString();
+
+            //Assert
+            Assert.Contains("Ficha do Veículo", dadosveiculo);
         }
     }
 }
