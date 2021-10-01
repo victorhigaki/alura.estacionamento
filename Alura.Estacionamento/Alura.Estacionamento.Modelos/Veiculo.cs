@@ -7,10 +7,9 @@ namespace Alura.Estacionamento.Modelos
 {
     public class Veiculo
     {
-        //Campos
-        private string _ticket;
+        //Campos      
         private string _placa;
-        private string _proprietario;        
+        private string _proprietario;
         private TipoVeiculo _tipo;
 
         //Propriedades
@@ -62,9 +61,9 @@ namespace Alura.Estacionamento.Modelos
         /// Framework, entre outros benefícios.
         /// </summary>
         public string Cor { get; set; }
-        public double Largura { get; set; }    
+        public double Largura { get; set; }
         public double VelocidadeAtual { get; set; }
-        public string Modelo { get; set; }        
+        public string Modelo { get; set; }
         public string Proprietario
         {
             get
@@ -83,9 +82,8 @@ namespace Alura.Estacionamento.Modelos
         }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }
-        public string Ticket { get => _ticket; set => _ticket = value; }
         public string IdTicket { get; set; }
-        internal TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
+        public TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
 
         //Métodos
         public void Acelerar(int tempoSeg)
@@ -93,7 +91,7 @@ namespace Alura.Estacionamento.Modelos
             this.VelocidadeAtual += (tempoSeg * 10);
         }
 
-        public void Freiar(int tempoSeg)
+        public void Frear(int tempoSeg)
         {
             this.VelocidadeAtual -= (tempoSeg * 15);
         }
@@ -108,12 +106,12 @@ namespace Alura.Estacionamento.Modelos
 
         public override string ToString()
         {
-            return  $"Ficha do Veículo:\n " +
+            return $"Ficha do Veículo:\n " +
                     $"Tipo do Veículo: {this.Tipo.ToString()}\n " +
                     $"Proprietário: {this.Proprietario}\n" +
                     $"Modelo: {this.Modelo}\n" +
                     $"Cor: {this.Cor}\n" +
-                    $"Placa: {this.Placa}\n";            
+                    $"Placa: {this.Placa}\n";
 
         }
 
@@ -125,10 +123,10 @@ namespace Alura.Estacionamento.Modelos
 
         public Veiculo(string proprietario)
         {
-           Proprietario = proprietario;
+            Proprietario = proprietario;
         }
 
-        
+
 
     }
 }
