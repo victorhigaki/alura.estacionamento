@@ -10,7 +10,7 @@ namespace Alura.Estacionamento.Tests
    
         [Fact(DisplayName = "Teste n°1")]
         [Trait("Funcionalidade", "Acelerar")]
-        public void TestaVeiculoAcelerarComAceleracao10()
+        public void TestaVeiculoAcelerar()
         {
             //Arrange
             var veiculo = new Veiculo();
