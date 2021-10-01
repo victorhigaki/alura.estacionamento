@@ -1,3 +1,4 @@
+using Alura.Estacionamento.Alura.Estacionamento.Modelos;
 using Alura.Estacionamento.Modelos;
 using System;
 using Xunit;
@@ -15,6 +16,7 @@ namespace Alura.Estacionamento.Tests
             Output = output;
             Output.WriteLine("Execução do  construtor.");
             veiculo = new Veiculo();
+            veiculo.Tipo = TipoVeiculo.Automovel;
             operador = new Operador();
             operador.Nome = "Operador Noturno";
         }
@@ -106,6 +108,7 @@ namespace Alura.Estacionamento.Tests
             Patio estacionamento = new Patio();
             estacionamento.OperadorPatio = operador;
             var veiculo = new Veiculo();
+            veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Proprietario = "José Silva";
             veiculo.Placa = "ZXC-8524";
             veiculo.Cor = "Verde";
@@ -113,6 +116,7 @@ namespace Alura.Estacionamento.Tests
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             var veiculoAlterado = new Veiculo();
+            veiculoAlterado.Tipo = TipoVeiculo.Automovel;
             veiculoAlterado.Proprietario = "José Silva";
             veiculoAlterado.Placa = "ZXC-8524";
             veiculoAlterado.Cor = "Preto"; //Alterado

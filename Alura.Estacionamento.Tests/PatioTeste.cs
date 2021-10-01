@@ -1,4 +1,5 @@
-﻿using Alura.Estacionamento.Modelos;
+﻿using Alura.Estacionamento.Alura.Estacionamento.Modelos;
+using Alura.Estacionamento.Modelos;
 using System;
 using System.Collections.Generic;
 using Xunit;
@@ -18,6 +19,7 @@ namespace Alura.Estacionamento.Tests
 
             var veiculo = new Veiculo();
             veiculo.Proprietario = "André Silva";
+            veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Placa = "ABC-0101";
             veiculo.Modelo = "Fusca";    
             veiculo.Acelerar(10);
@@ -64,34 +66,38 @@ namespace Alura.Estacionamento.Tests
             Assert.Equal(2, faturamento);
         }
 
-        //[Theory]     
-        //[InlineData("André Silva", "ASD-1498", "preto", "Gol")]
-        //public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
-        //                                   string placa,
-        //                                   string cor,
-        //                                   string modelo)
-        //{
-        //    //Arrange
-        //    Patio estacionamento = new Patio();
-        //    var veiculo = new Automovel();
-        //    veiculo.Proprietario = proprietario;
-        //    veiculo.Placa = placa;
-        //    veiculo.Cor = cor;
-        //    veiculo.Modelo = modelo;
-        //    veiculo.Acelerar(10);
-        //    veiculo.Freiar(5);
-        //    estacionamento.RegistrarEntradaVeiculo(veiculo);
-
-        //    //Act
-        //    var consultado = estacionamento.PesquisaVeiculo(placa);
-
-        //    //Assert
-        //    Assert.Equal(placa,consultado.Placa);
-        //}
-
         [Theory]
         [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
         public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
+                                           string placa,
+                                           string cor,
+                                           string modelo)
+        {
+            //Arrange
+            Patio estacionamento = new Patio();
+            var operador = new Operador();
+            operador.Nome = "Operador Noturno";
+            estacionamento.OperadorPatio = operador;
+            var veiculo = new Veiculo();
+            veiculo.Tipo = TipoVeiculo.Automovel;
+            veiculo.Proprietario = proprietario;
+            veiculo.Placa = placa;
+            veiculo.Cor = cor;
+            veiculo.Modelo = modelo;
+            veiculo.Acelerar(10);
+            veiculo.Freiar(5);
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+            //Act
+            var consultado = estacionamento.PesquisaVeiculoPorPlaca(placa);
+
+            //Assert
+            Assert.Equal(placa, consultado.Placa);
+        }
+
+        [Theory]
+        [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
+        public void LocalizaVeiculoNoPatioComBaseNoTicket(string proprietario,
                                           string placa,
                                           string cor,
                                           string modelo)
@@ -103,6 +109,7 @@ namespace Alura.Estacionamento.Tests
             estacionamento.OperadorPatio = operador;
 
             var veiculo = new Veiculo();
+            veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
             veiculo.Cor = cor;
@@ -112,7 +119,7 @@ namespace Alura.Estacionamento.Tests
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             //Act
-            var consultado = estacionamento.PesquisaVeiculo(veiculo.IdTicket);
+            var consultado = estacionamento.PesquisaVeiculoPorTicket(veiculo.IdTicket);
 
             //Assert
             Assert.Equal(placa, consultado.Placa);
