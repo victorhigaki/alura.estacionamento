@@ -9,7 +9,7 @@ namespace Alura.Estacionamento.Tests
     {
        
         [Fact]   
-        public void TestaVeiculoAcelerarComAceleracao10()
+        public void TestaVeiculoAcelerar()
         {
             //Arrange
            var veiculo = new Veiculo();
@@ -23,13 +23,13 @@ namespace Alura.Estacionamento.Tests
         }
 
         [Fact]        
-        public void TestaVeiculoFreiarComFreio10()
+        public void TestaVeiculoFrear()
         {
             //Arrange
             var veiculo = new Veiculo();
 
             //Act
-            veiculo.Freiar(10);
+            veiculo.Frear(10);
             //Assert
             Assert.Equal(-150, veiculo.VelocidadeAtual);
         }
