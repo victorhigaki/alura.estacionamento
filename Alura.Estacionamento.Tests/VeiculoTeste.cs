@@ -59,6 +59,9 @@ namespace Alura.Estacionamento.Tests
             //Arrange
 
             Patio estacionamento = new Patio();
+            Operador operador = new Operador();
+            operador.Nome = "Operador Noturno";
+            estacionamento.OperadorPatio = operador;
             var veiculo = new Veiculo();
             veiculo.Proprietario = "José Silva";
             veiculo.Tipo = TipoVeiculo.Automovel;
@@ -98,7 +101,31 @@ namespace Alura.Estacionamento.Tests
             string dadosveiculo = veiculo.ToString();
 
             //Assert
-            Assert.Contains("Ficha do Veículo", dadosveiculo);
+            Assert.Contains("Ficha do veículo", dadosveiculo);
+        }
+
+        [Fact]
+        public void TestaNomeProprietarioComDoisCaracteres()
+        {
+            //Arrange
+            string nomeProprietario = "Ab";
+            //Assert
+            Assert.Throws<FormatException>(
+                //Act
+                () => new Veiculo(nomeProprietario)
+            );
+        }
+
+        [Fact]
+        public void TestaQuantidadeCaracteresPlacaVeiculo()
+        {
+            //Arrange
+            string placa = "Ab";
+            //Assert
+            Assert.Throws<FormatException>(
+                //Act
+                () => new Veiculo().Placa = placa
+            );
         }
     }
 }
