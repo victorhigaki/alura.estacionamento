@@ -40,48 +40,48 @@ namespace Alura.Estacionamento.Modelos
 
         public string RegistrarSaidaVeiculo(String placa)
         {
-            Veiculo encontrado = null;
-            string registro = string.Empty;
+            Veiculo procurado = null;
+            string informacao = string.Empty;
 
             foreach (Veiculo v in this.Veiculos)
             {
                 if (v.Placa == placa)
                 {
                     v.HoraSaida = DateTime.Now;
-                    TimeSpan tempo = v.HoraSaida - v.HoraEntrada;
-                    double valorCobrado = 0;
+                    TimeSpan tempoPermanencia = v.HoraSaida - v.HoraEntrada;
+                    double valorASerCobrado = 0;
                     if (v.Tipo == TipoVeiculo.Automovel)
                     {
                         /// o método Math.Ceiling(), aplica o conceito de teto da matemática onde o valor máximo é o inteiro imediatamente posterior a ele.
                         /// Ex.: 0,9999 ou 0,0001 teto = 1
                         /// Obs.: o conceito de chão é inverso e podemos utilizar Math.Floor();
-                        valorCobrado = Math.Ceiling(tempo.TotalHours) * 2;
+                        valorASerCobrado = Math.Ceiling(tempoPermanencia.TotalHours) * 2;
 
                     }
-                    else if (v.Tipo == TipoVeiculo.Motocicleta)
+                    if (v.Tipo == TipoVeiculo.Motocicleta)
                     {
-                        valorCobrado = Math.Ceiling(tempo.TotalHours) * 1;
+                        valorASerCobrado = Math.Ceiling(tempoPermanencia.TotalHours) * 1;
                     }
-                    registro = string.Format(" Hora de entrada: {0: HH: mm: ss}\n " +
+                    informacao = string.Format(" Hora de entrada: {0: HH: mm: ss}\n " +
                                              "Hora de saída: {1: HH:mm:ss}\n " +
                                              "Permanência: {2: HH:mm:ss} \n " +
-                                             "Valor a pagar: {3:c}", v.HoraEntrada, v.HoraSaida, new DateTime().Add(tempo), valorCobrado);
-                    encontrado = v;
-                    this.Faturado = this.Faturado + valorCobrado;
+                                             "Valor a pagar: {3:c}", v.HoraEntrada, v.HoraSaida, new DateTime().Add(tempoPermanencia), valorASerCobrado);
+                    procurado = v;
+                    this.Faturado = this.Faturado + valorASerCobrado;
                     break;
                 }
 
             }
-            if (encontrado != null)
+            if (procurado != null)
             {
-                this.Veiculos.Remove(encontrado);
+                this.Veiculos.Remove(procurado);
             }
             else
             {
-                return "Não há veículo com a placa informada.";
+                return "Não encontrado veículo com a placa informada.";
             }
 
-            return registro;
+            return informacao;
         }
 
         public Veiculo AlteraDadosVeiculo(Veiculo veiculoAlterado)
